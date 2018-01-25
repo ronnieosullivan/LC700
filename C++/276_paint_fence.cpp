@@ -1,4 +1,4 @@
-// Solution 1:
+// Solution 1:张杰
 // same[i] = diff[i - 1]
 // diff[i] = (same[i - 1] + diff[i - 1]) * (k - 1)
 class Solution {

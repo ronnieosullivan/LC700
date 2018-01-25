@@ -6,7 +6,6 @@ public:
         getNext(p, next);
         while (i < m && j < n) {
             while (j > 0 && t[i] != p[j]) j = next[j - 1];
-            cout << j << endl;
             j += (t[i] == p[j] ? 1 : 0);
             i++;
         }
