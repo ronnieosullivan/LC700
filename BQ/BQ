@@ -1,0 +1,69 @@
+Q: Tell me about yourself? 
+My name is Daheng and I am a software engineer at Bloomberg with 3 years of experience. I spent the first year of my career developing end to end terminal functions, learning all technologies in Bloomberg, and get myself familiar with Bloomberg products. Moving foward to second year, I started to take over ownership of various core products, designing complex distributed systems, refactoring legacy code that has great importance. The thrid year, I started interviewing, and mentoring new hires, supporting clients. I am also leading many business discussions and project planning, and started to initiate projects.
+
+Q: Why Amazon? 
+Amazon is a leading tech company in the industry. It started as an online retailing company, but quickly becomes a versatile company that has developed almost all the things that a software company could possible have. AWS, cutting edge and the future of cloud computing, which also contributes a lot to the revenue. Advertisement, growing fast and it is quicking taking over the market. My referrer, working in Amazon NYC office, speaks highly about the culture here. People here are smart, positve, hardworking and easy to work with. And many of my friends from college are working in the Amazon seattle office, I can clearly see their growth over the years. They have learnt so much from their experiences in Amazon as sde, and I believe if I could join Amazon, it would be a great chance for me to learn as well. 
+
+Q: Why chose this position?
+The requirements of this postion matches my background very well. 
+I originally applied for a team in AWS and was transferred to advertisement group. I think that is perfectly fine for me. I believe in the company. The company's culture contributes a lot to individual teams. Based on what I have seen and what I have learned from people working here, or even the interation with the Amazon recruiters, I think this company has a great culture for engineers, to work here and thrive. 
+I am not too worried about the specific team that I will end up in and I believe if everything went well with this interview, I will have the chance to talk to the managers and members, and I can go from there. 
+
+Q: Biggest mistake? 
+We had a few important features that we want to add to the system and the business manager had prioritized them. But while I was working on the top priority, I realized that the features with lower priorities can be also added in. But unfortunately that turned out to be a bad idea 1. the features had dependencies on each other 2. the new features breaks other things built by teammates.3. If the implementation of the first priority has a problem and needs to be rolled back, it would affect the other things. I ended up removing a lot of the code manually and was able to deliver 2 days later.
+What I've learned from it: 
+1. develop and deploy thing gradually
+2. think about failover plan/rollback plan
+3. do not change priority without meeting
+
+1. Respect the plan and watch out for the dependencies. If planning to change the plan and it gives much better productivity, discuss it with the members first. 
+2. Use tools in the way it is designed. e.g. use branches in git, never have local dirty files. If the team decided to use a tool, we must make sure that all the team members are using it the right way, and all are comfortable with it, and moving forward, some standards and best practices need to be set up. 
+3. Deadline is not just a tool to enforce producticity. It is set to maximize the business value in many cases. A late delivery can diminish the value of the product and the development plan is important to fit in the bigger picture of business planning and timing. 
+
+Q: Give an example of when you took a risk and it failed? 
+
+
+Q: Tell me a time when you created an innovative product? 
+The company supports the continuous integration (CI) system and cotinueous deployment (CD) system separately, which makes the process pretty complicated after the code is reviewed. I deployed a deployment system that automates this process by a lot and it meets perfectly with the team workflow. (describe)
+It also saves us from mistakes. We have a TCA system that it builds 2 libraries from the same repo, but includes different sets of files based on the MACRO. If you manually build these 2 libraries together locally, a lot of the temporary files might conflict each other and the build will include the wrong version of the lib mistakenly. It is hard for a human being to eyebow every single library a task links against. Using my system, however, can avoid this problem cause we can existing build these 2 versions in 2 nodes. 
+
+Q: Tell me about a time when you observed two business opportunities to import ROI, and how did you determine that they were connected? 
+
+
+Q: How do you find the time to stay inspired, acquire new knowledge, innovate your work? 
+I believe that inspirations come from daily work. I always think about solutions that are more generic and solutions that can be reused. Also, most problems have been solved by other teams, maybe in different ways. I found that exchanging a few words is always helpful. Questions can be as simple as "how do you build and deploy?", "what do you use for revision control?", "how do you do code review?", "what problems are you solving?", "what new technology are you trying?". Also, typical tech companies have tech talks that can be very useful, especially when you are facing similar problem.
+
+Q: Tell me about a time when you had to deal with a poor performer on your team?
+Well I think there are mainly two types of poor performers that I worked with in the past. One type is someone who graduated recently and found it hard to convert knowledge from school to professional programming. The other is the ones with negative attitude. 
+For the first type, it is much easier. I worked with a guy who found it difficult not to make a mistake at deployment, because he does not have much experience in distributed system, how routing works. 
+For the second type, it is much more tricky.
+
+
+Q: Tell me about a time when you could have stopped working but persisted.
+
+
+Q: Tell me about a time when you proposed a new business.
+I think the most successful one was leveraging order analytics rendering system. It was originally designed to support tca only, but it is leveraged to support many other analytics and there are more to come. It started with tca rendering system, which the similar thing has done before in order to render other analytical data. The idea is to develop something that is more elegant and generic so that it would be much easier to bring other analytics on board in the future. Most of the analytics have a associated service that can render analytical result, all we need is to fit them into our system. It wasn't easy because each analytic might require different workflow. The nature of pre-trade analysis is very different than the nature of post-trade and in-trade. We have done a lot of the research so that they can all fit in with the minimum amount of work.
+
+Another example would be buffered publisher.
+
+Q: Describe how you would handle a busy situation where three people are waiting for help from you? 
+1. In case I know it is documented, I will send a link over. Or I have a quick answer, I will reply. I am confortable doing a bit multitasking, just not in case where I need to fully focus on something important and can't afford a mistake.
+2. If not, I would explain that I might not be able to help at the moment, but David has solve similar problem like that before and should be able to help.
+3. Or depends on the situation, I would say that I should be avaiable at sometime/after the meeting at 3pm, and if the problem still remains, feel free to come over. We can discuss it.
+In all cases, if I am not available, I will make sure that my status is clearly communicated.
+
+Q: Tell me about a time where you thought of a clever new way to save money for the company.
+Increasing productivity is the most sufficient way to save money IMO. We had this situation in the past where one of the product managers would prefer to come directly to me and ask for new features / bug fixes. The main reason of this was that we did not have a calendar that has the necessary transparency for both engineers and prod managers. prod managers might find it hard to keep track of things, what are being actively worked on, what are pending, and what are deferred. For important items, product manager tend to come to us directly to emphasize it as it is hard to plan ahead of time. Eventually we decided to go with sprint, but without scrams.
+
+Q: Tell me a time when you earned trust of a group.
+
+
+Q: Tell me about a time when you had to dive deep into the data and the results you achieved.
+
+
+Q: Tell me about the most difficult interatction you had at work. 
+
+
+Q: Tell me about a time where you overcame an obstacle and delivered results.
+
