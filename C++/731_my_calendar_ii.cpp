@@ -47,7 +47,7 @@ private:
 
 // Solution 3:
 // Not accepted
-// Reason: when operator== is not transferrable, i.e. a == b, b == c, but a != c, 
+// Reason: when operator== is not transitive, i.e. a == b, b == c, but a != c, 
 // set does not behave the right way.
 class MyCalendarTwo {
 public:

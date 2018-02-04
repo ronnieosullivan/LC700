@@ -64,14 +64,36 @@ public:
         int r = nums.back() - nums.front();
         while (l <= r) {
             int cnt = 0;
-            int j = 0;
             int mid = l + (r - l) / 2;
-            for (int i = 0; i < n; ++i) {
+            for (int i = 0, j = 0; i < n; i++) {
                 while (j < n && nums[j] - nums[i] <= mid) j += m[nums[j]];
                 cnt += j - i - 1;
             }
             cnt >= k ? r = mid - 1 : l = mid + 1;
         }        
         return l;
+    }
+};
+
+// Simplest and most efficient
+class Solution {
+public:
+    int smallestDistancePair(vector<int>& nums, int k) {
+        if (nums.empty()) return 0;
+        sort(nums.begin(), nums.end());
+        int n = nums.size(), low = 0, high = nums[n-1] - nums[0];
+        while (low < high) {
+            int mid = (low + high)/2, cnt = 0;
+            for (int i = 0, j = 0; i < n; i++) {
+                while (j < n && nums[j]-nums[i] <= mid) j++;
+                cnt += j-i-1;
+            }
+
+            if (cnt < k) 
+                low = mid+1;
+            else
+                high = mid;
+        }
+        return low;
     }
 };

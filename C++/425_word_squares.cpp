@@ -2,11 +2,9 @@ class Solution {
 public:
     struct TrieNode {
         TrieNode()
-        : children(26, nullptr)
-        , isWord(false) {}
+        : children(26, nullptr) {}
         vector<TrieNode*> children;
         vector<int> indexes; // words
-        bool isWord;
     };
     TrieNode* buildTrie(vector<string>& words) {
         TrieNode* root = new TrieNode();

@@ -1,3 +1,4 @@
+// Solution 1:
 class Solution {
 public:
     string countOfAtoms(string formula) {
@@ -36,6 +37,51 @@ public:
         }
         string res("");
         for (auto& a : v[0]) {
+            res += a.first + (a.second == 1 ? "" : to_string(a.second));
+        }
+        return res;
+    }
+};
+
+// Solution 2:
+// stack
+class Solution {
+public:
+    string countOfAtoms(string formula) {
+        stack<map<string, int>> st;
+        st.push({});
+        for (int i = 0; i < formula.size(); ++i) {
+            if (formula[i] == '(') {
+                st.push({});
+            }
+            else if (formula[i] == ')') {
+                cout << "1" << endl;
+                int cnt = 0;
+                while (i + 1 < formula.size() && formula[i + 1] >= '0' && formula[i + 1] <= '9') {
+                    cnt = cnt * 10 + formula[i + 1] - '0';
+                    i++;
+                }
+                auto m = st.top(); st.pop();
+                for (auto& a : m) {
+                    st.top()[a.first] += a.second * (cnt == 0 ? 1 : cnt);
+                }
+            }
+            else { // must be element + number format
+                string tmp = formula.substr(i, 1);
+                if (i + 1 < formula.size() && formula[i + 1] >= 'a' && formula[i + 1] <= 'z') {
+                    tmp.push_back(formula[i + 1]);
+                    i++;
+                }
+                int cnt = 0;
+                while (i + 1 < formula.size() && formula[i + 1] >= '0' && formula[i + 1] <= '9') {
+                    cnt = cnt * 10 + formula[i + 1] - '0';
+                    i++;
+                }
+                st.top()[tmp] += (cnt == 0 ? 1 : cnt);
+            }
+        }
+        string res("");
+        for (auto& a : st.top()) {
             res += a.first + (a.second == 1 ? "" : to_string(a.second));
         }
         return res;
