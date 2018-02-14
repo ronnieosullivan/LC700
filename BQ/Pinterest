@@ -1,0 +1,11 @@
+Pinterest BQ:
+1. I am a software engineer and I've worked in Bloomberg for more than 3 years. I work in a team called Order Analytics, and I am currently working on systems that produce analytical data for traders, and systems that deliver these data to multiple downstreams. On a daily basis, I am developing and maintaining many services written in C++ and some client-facing terminal UI in Javascript. The major project that I own is a system that renders realtime analytical data to traders that helps them making trading decisions and optimizing the return. We have more than 5k users at the moment. Another project is a system that computes transaction cost and risk based on volume estimation model, which is used more than 200 firms in the financial industry.
+
+2. Why Pinterest?
+a. tech company
+b. technology stack:
+	web application: django
+	database: mostly mysql + cassandra and mongodb
+	middle layer: memcached + redis
+	big data: Hadoop/EMR
+c. still growing
