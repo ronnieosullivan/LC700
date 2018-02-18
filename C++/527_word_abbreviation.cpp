@@ -1,3 +1,4 @@
+// classic
 // Solution 1:
 class Solution {
 public:
@@ -6,7 +7,7 @@ public:
         vector<string> res(n);
         vector<int> pre(n, 1);
         for (int i = 0; i < n; ++i) {
-            res[i] = abbreviate(dict[i], pre[i]);
+            res[i] = abbreviate(dict[i], 1);
         }
         // if res[i] has no conflict with any res[j], res[i] doesn't need to change anymore
         for (int i = 0; i < n; ++i) {
